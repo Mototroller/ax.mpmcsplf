@@ -26,6 +26,7 @@ before_install:
   - sudo apt-get update -qq
 
 script:
+  - echo 512 > /proc/sys/vm/nr_hugepages
   - mkdir build
   - cd build
   - cmake -DCMAKE_CXX_COMPILER=$COMPILER .. && make
