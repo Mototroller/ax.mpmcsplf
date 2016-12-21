@@ -12,3 +12,4 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR} ax.core/include)
 include_directories(${PROJECT_NAME} include)
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
+target_link_libraries(${PROJECT_NAME} atomic pthread)
